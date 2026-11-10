@@ -1,17 +1,19 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  repo: AayushDoshiDigital/aayush_portfolio
   branch: main
-local_backend: true
-media_folder: src/images/uploads
+  base_url: https://aayush-portfolio-gold.vercel.app
+  auth_endpoint: api/auth
+  auth_scope: public_repo
+media_folder: website-cms-project/src/images/uploads
 public_folder: /images/uploads
-site_url: https://YOUR-SITE.netlify.app
+site_url: https://aayush-portfolio-gold.vercel.app
 locale: en
 collections:
 - name: blog
   label: 📝 Blog posts
   label_singular: Blog post
-  folder: src/blog
+  folder: website-cms-project/src/blog
   create: true
   extension: md
   format: frontmatter
@@ -72,7 +74,7 @@ collections:
   files:
   - name: home
     label: Home
-    file: src/_data/pc/home.json
+    file: website-cms-project/src/_data/pc/home.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -122,7 +124,7 @@ collections:
       summary: '{{fields.heading}} {{fields.label}}'
   - name: about
     label: About Me
-    file: src/_data/pc/about.json
+    file: website-cms-project/src/_data/pc/about.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -186,7 +188,7 @@ collections:
       summary: '{{fields.question}}'
   - name: seo
     label: SEO Services
-    file: src/_data/pc/seo.json
+    file: website-cms-project/src/_data/pc/seo.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -250,7 +252,7 @@ collections:
       summary: '{{fields.question}}'
   - name: ads
     label: Google Ads
-    file: src/_data/pc/ads.json
+    file: website-cms-project/src/_data/pc/ads.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -314,7 +316,7 @@ collections:
       summary: '{{fields.question}}'
   - name: meta
     label: Meta Ads
-    file: src/_data/pc/meta.json
+    file: website-cms-project/src/_data/pc/meta.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -378,7 +380,7 @@ collections:
       summary: '{{fields.question}}'
   - name: sm
     label: Social Media Marketing
-    file: src/_data/pc/sm.json
+    file: website-cms-project/src/_data/pc/sm.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -442,7 +444,7 @@ collections:
       summary: '{{fields.question}}'
   - name: cm
     label: Content Marketing
-    file: src/_data/pc/cm.json
+    file: website-cms-project/src/_data/pc/cm.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -506,7 +508,7 @@ collections:
       summary: '{{fields.question}}'
   - name: ec
     label: E-commerce Marketing
-    file: src/_data/pc/ec.json
+    file: website-cms-project/src/_data/pc/ec.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -570,7 +572,7 @@ collections:
       summary: '{{fields.question}}'
   - name: ls
     label: Local SEO
-    file: src/_data/pc/ls.json
+    file: website-cms-project/src/_data/pc/ls.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -634,7 +636,7 @@ collections:
       summary: '{{fields.question}}'
   - name: wd
     label: Website Development
-    file: src/_data/pc/wd.json
+    file: website-cms-project/src/_data/pc/wd.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -698,7 +700,7 @@ collections:
       summary: '{{fields.question}}'
   - name: contact
     label: Contact
-    file: src/_data/pc/contact.json
+    file: website-cms-project/src/_data/pc/contact.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -758,7 +760,7 @@ collections:
       summary: '{{fields.question}}'
   - name: hc
     label: Healthcare
-    file: src/_data/pc/hc.json
+    file: website-cms-project/src/_data/pc/hc.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -822,7 +824,7 @@ collections:
       summary: '{{fields.question}}'
   - name: mf
     label: Manufacturing
-    file: src/_data/pc/mf.json
+    file: website-cms-project/src/_data/pc/mf.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -886,7 +888,7 @@ collections:
       summary: '{{fields.question}}'
   - name: fd
     label: Food
-    file: src/_data/pc/fd.json
+    file: website-cms-project/src/_data/pc/fd.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -950,7 +952,7 @@ collections:
       summary: '{{fields.question}}'
   - name: pf
     label: Portfolio
-    file: src/_data/pc/pf.json
+    file: website-cms-project/src/_data/pc/pf.json
     fields:
     - name: meta_title
       label: SEO title (shown in Google)
@@ -977,7 +979,7 @@ collections:
   files:
   - name: portfolio
     label: Portfolio page
-    file: src/_data/portfolio.json
+    file: website-cms-project/src/_data/portfolio.json
     fields:
     - name: sections
       label: Portfolio sections (keep the order)
@@ -1050,14 +1052,14 @@ collections:
   files:
   - name: site
     label: Contact details, logo & photos
-    file: src/_data/site.json
+    file: website-cms-project/src/_data/site.json
     fields:
     - name: name
       label: Brand name
       widget: string
       required: false
     - name: url
-      label: Website address (https://yoursite.netlify.app)
+      label: Website address (https://aayush-portfolio-gold.vercel.app)
       widget: string
       required: false
     - name: footer_text
@@ -1114,7 +1116,7 @@ collections:
       required: false
   - name: navigation
     label: Navbar & footer links (internal linking)
-    file: src/_data/navigation.json
+    file: website-cms-project/src/_data/navigation.json
     fields:
     - name: main
       label: Top menu (use "Dropdown items" for dropdowns)
@@ -1169,3 +1171,4 @@ collections:
       label: Footer button
       widget: object
       fields: *id003
+display_url: https://aayush-portfolio-gold.vercel.app
