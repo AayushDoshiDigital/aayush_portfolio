@@ -1,0 +1,1171 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  branch: main
+local_backend: true
+media_folder: src/images/uploads
+public_folder: /images/uploads
+site_url: https://YOUR-SITE.netlify.app
+locale: en
+collections:
+- name: blog
+  label: 📝 Blog posts
+  label_singular: Blog post
+  folder: src/blog
+  create: true
+  extension: md
+  format: frontmatter
+  slug: '{{slug}}'
+  summary: '{{title}} ({{date}})'
+  sortable_fields:
+  - date
+  - title
+  fields:
+  - name: title
+    label: Title
+    widget: string
+    required: true
+  - name: description
+    label: Meta description (also shown on blog cards)
+    widget: text
+    required: false
+  - name: date
+    label: Publish date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    format: YYYY-MM-DD
+  - name: draft
+    label: Draft (hide from website)
+    widget: boolean
+    default: false
+    required: false
+  - name: image
+    label: Featured image
+    widget: image
+    required: false
+  - name: image_alt
+    label: Image description (alt text)
+    widget: string
+    required: false
+  - name: related
+    label: Related pages / internal links
+    widget: list
+    fields: &id003
+    - &id001
+      name: label
+      label: Label
+      widget: string
+      required: false
+    - &id002
+      name: url
+      label: Link (e.g. /about.html)
+      widget: string
+      required: false
+    required: false
+    summary: '{{fields.label}}'
+  - name: body
+    label: Article
+    widget: markdown
+- name: pages
+  label: 📄 Pages (SEO & content)
+  files:
+  - name: home
+    label: Home
+    file: src/_data/pc/home.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+  - name: about
+    label: About Me
+    file: src/_data/pc/about.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_text_2
+      label: Intro text, second paragraph
+      widget: text
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: seo
+    label: SEO Services
+    file: src/_data/pc/seo.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: ads
+    label: Google Ads
+    file: src/_data/pc/ads.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: meta
+    label: Meta Ads
+    file: src/_data/pc/meta.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: sm
+    label: Social Media Marketing
+    file: src/_data/pc/sm.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: cm
+    label: Content Marketing
+    file: src/_data/pc/cm.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: ec
+    label: E-commerce Marketing
+    file: src/_data/pc/ec.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: ls
+    label: Local SEO
+    file: src/_data/pc/ls.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: wd
+    label: Website Development
+    file: src/_data/pc/wd.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: contact
+    label: Contact
+    file: src/_data/pc/contact.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: hc
+    label: Healthcare
+    file: src/_data/pc/hc.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: mf
+    label: Manufacturing
+    file: src/_data/pc/mf.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: fd
+    label: Food
+    file: src/_data/pc/fd.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+    - name: hero_button
+      label: Button text
+      widget: string
+      required: false
+    - name: sections
+      label: Section headings (keep the same order as on the page; edit text only)
+      widget: list
+      fields:
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: heading
+        label: Heading
+        widget: string
+        required: false
+      - name: subheading
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.heading}} {{fields.label}}'
+    - name: faqs
+      label: FAQs
+      widget: list
+      fields:
+      - name: question
+        label: Question
+        widget: string
+        required: false
+      - name: answer
+        label: Answer
+        widget: text
+        required: false
+      required: false
+      summary: '{{fields.question}}'
+  - name: pf
+    label: Portfolio
+    file: src/_data/pc/pf.json
+    fields:
+    - name: meta_title
+      label: SEO title (shown in Google)
+      widget: string
+      required: false
+    - name: meta_description
+      label: Meta description (shown in Google)
+      widget: text
+      required: false
+    - name: hero_label
+      label: Top label (small text)
+      widget: string
+      required: false
+    - name: hero_heading
+      label: Main heading (use <em>word</em> for yellow words)
+      widget: string
+      required: false
+    - name: hero_text
+      label: Intro text
+      widget: text
+      required: false
+- name: portfolio
+  label: 🖼️ Portfolio (logos & screenshots)
+  files:
+  - name: portfolio
+    label: Portfolio page
+    file: src/_data/portfolio.json
+    fields:
+    - name: sections
+      label: Portfolio sections (keep the order)
+      widget: list
+      fields:
+      - name: id
+        label: Section ID (do not change)
+        widget: string
+        required: false
+      - name: label
+        label: Small label
+        widget: string
+        required: false
+      - name: title
+        label: Heading
+        widget: string
+        required: false
+      - name: subtitle
+        label: Subheading
+        widget: string
+        required: false
+      - name: text
+        label: Intro text
+        widget: text
+        required: false
+      - name: clients_label
+        label: Hover bar label
+        widget: string
+        required: false
+      - name: layout
+        label: Screenshot layout ("s5" = tall phone-style frames, empty = normal)
+        widget: string
+        required: false
+      - name: clients
+        label: Clients
+        widget: list
+        fields:
+        - name: name
+          label: Client name
+          widget: string
+          required: false
+        - name: initials
+          label: Initials (shown if no logo)
+          widget: string
+          required: false
+        - name: logo
+          label: Logo
+          widget: image
+          required: false
+        required: false
+        summary: '{{fields.name}}'
+      - name: screenshots
+        label: Screenshots
+        widget: list
+        fields:
+        - name: image
+          label: Screenshot
+          widget: image
+          required: false
+        - name: caption
+          label: Caption
+          widget: string
+          required: false
+        required: false
+        summary: '{{fields.caption}}'
+      required: false
+      summary: '{{fields.title}}'
+- name: settings
+  label: ⚙️ Contact, images & links
+  files:
+  - name: site
+    label: Contact details, logo & photos
+    file: src/_data/site.json
+    fields:
+    - name: name
+      label: Brand name
+      widget: string
+      required: false
+    - name: url
+      label: Website address (https://yoursite.netlify.app)
+      widget: string
+      required: false
+    - name: footer_text
+      label: Footer description
+      widget: string
+      required: false
+    - name: email
+      label: Email
+      widget: string
+      required: false
+    - name: phone
+      label: Phone (as shown)
+      widget: string
+      required: false
+    - name: phone_link
+      label: Phone for tap-to-call (e.g. +917383555977)
+      widget: string
+      required: false
+    - name: whatsapp
+      label: WhatsApp link
+      widget: string
+      required: false
+    - name: linkedin
+      label: LinkedIn link
+      widget: string
+      required: false
+    - name: logo
+      label: Logo (dark, for navbar)
+      widget: image
+      required: false
+    - name: logo_white
+      label: Logo (white, for footer)
+      widget: image
+      required: false
+    - name: photo_home
+      label: Photo on homepage (Why Choose Me)
+      widget: image
+      required: false
+    - name: photo_about
+      label: Photo on About page
+      widget: image
+      required: false
+    - name: role
+      label: Footer role text
+      widget: string
+      required: false
+    - name: copyright
+      label: Copyright text
+      widget: string
+      required: false
+    - name: og_image
+      label: Social share image (optional)
+      widget: image
+      required: false
+  - name: navigation
+    label: Navbar & footer links (internal linking)
+    file: src/_data/navigation.json
+    fields:
+    - name: main
+      label: Top menu (use "Dropdown items" for dropdowns)
+      widget: list
+      fields:
+      - name: label
+        label: Label
+        widget: string
+        required: false
+      - name: url
+        label: Link (leave empty for dropdowns)
+        widget: string
+        required: false
+      - name: children
+        label: Dropdown items
+        widget: list
+        fields:
+        - *id001
+        - *id002
+        - name: children
+          label: Sub-items
+          widget: list
+          fields: *id003
+          required: false
+        required: false
+        summary: '{{fields.label}}'
+      required: false
+      summary: '{{fields.label}}'
+    - name: cta
+      label: Navbar button
+      widget: object
+      fields: *id003
+    - name: footer_services
+      label: 'Footer: Services links'
+      widget: list
+      fields: *id003
+      required: false
+      summary: '{{fields.label}}'
+    - name: footer_industries
+      label: 'Footer: Industries links'
+      widget: list
+      fields: *id003
+      required: false
+      summary: '{{fields.label}}'
+    - name: footer_company
+      label: 'Footer: Company links'
+      widget: list
+      fields: *id003
+      required: false
+      summary: '{{fields.label}}'
+    - name: footer_button
+      label: Footer button
+      widget: object
+      fields: *id003

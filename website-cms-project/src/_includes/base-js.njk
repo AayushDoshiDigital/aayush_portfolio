@@ -1,0 +1,11 @@
+{% raw %}const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+const L=document.getElementById("links");document.getElementById("bg").onclick=()=>L.classList.toggle("open");
+L.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>L.classList.remove("open")));
+const DD=[...document.querySelectorAll(".dd")],cl=()=>DD.forEach(d=>{d.classList.remove("open");d.querySelector(".ddb").setAttribute("aria-expanded","false")});
+DD.forEach(d=>{const b=d.querySelector(".ddb");b.addEventListener("click",e=>{e.stopPropagation();const o=!d.classList.contains("open");cl();if(o){d.classList.add("open");b.setAttribute("aria-expanded","true")}})});
+document.addEventListener("click",cl);document.addEventListener("keydown",e=>{if(e.key==="Escape")cl()});
+
+document.querySelectorAll(".subb").forEach(b=>b.addEventListener("click",e=>{e.stopPropagation();const s=b.parentElement,o=s.classList.toggle("open");b.setAttribute("aria-expanded",o)}));
+document.addEventListener("click",()=>document.querySelectorAll(".sub.open").forEach(s=>{s.classList.remove("open");s.querySelector(".subb").setAttribute("aria-expanded","false")}));
+{% endraw %}

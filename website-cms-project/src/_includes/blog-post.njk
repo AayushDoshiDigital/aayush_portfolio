@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ title }} | {{ site.name }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ title }}"><meta property="og:description" content="{{ description }}"><meta property="og:type" content="article"><meta property="og:url" content="{{ site.url }}{{ page.url }}">{% if image %}<meta property="og:image" content="{{ site.url }}{{ image }}">{% endif %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<style>{% include "base-css.njk" %}</style><link rel="stylesheet" href="/css/blog.css"></head><body>
+{% include "nav.njk" %}
+<header class="hero one"><div class="wrap"><div><div class="eyebrow">Blog</div><h1>{{ title }}</h1><p>{{ description }}</p><div class="bm">{{ date | dateFormat }}</div></div></div></header>
+<article class="bp"><section><div class="wrap">{% if image %}<img class="bimg" src="{{ image }}" alt="{{ image_alt or title }}">{% endif %}
+<div class="bb">{{ content | safe }}</div>
+{% if related %}<aside class="rl"><h3>Related pages</h3><ul>{% for r in related %}<li><a href="{{ r.url }}">{{ r.label }}</a></li>{% endfor %}</ul></aside>{% endif %}
+</div></section></article>
+<section class="dark cta"><div class="wrap"><div class="sh rv"><h2>Have a Project in Mind?</h2><p>Let’s discuss your goals and explore how the right digital marketing approach can support your business.</p></div>
+<a class="btn" href="/contact.html">Get in Touch</a></div></section>
+{% include "footer.njk" %}
+<script>{% include "base-js.njk" %}</script></body></html>

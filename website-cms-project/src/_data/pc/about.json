@@ -1,0 +1,78 @@
+{
+  "meta_title": "About Aayush Doshi | Digital Marketer — Marketing with Aayush Doshi",
+  "meta_description": "Meet Aayush Doshi, a digital marketer helping businesses grow online with SEO, Google Ads, Meta Ads, social media marketing and website development.",
+  "hero_label": "ABOUT ME",
+  "hero_heading": "The Person Behind the <em>Marketing Strategy.</em>",
+  "hero_text": "I’m Aayush Doshi, a Digital Marketer passionate about helping businesses build a stronger online presence. I enjoy exploring the digital landscape, understanding audience behaviour, and developing marketing strategies that connect businesses with the right people.",
+  "hero_text_2": "My focus is on combining creativity, research, and data-driven thinking to create meaningful digital experiences and business growth opportunities.",
+  "sections": [
+    {
+      "label": "My Story",
+      "heading": "My Journey into Digital Marketing"
+    },
+    {
+      "label": "Experience",
+      "heading": "My Professional Experience"
+    },
+    {
+      "label": "Skills",
+      "heading": "Skills & Expertise"
+    },
+    {
+      "label": "Tools",
+      "heading": "Tools & Technologies I Work With"
+    },
+    {
+      "label": "Process",
+      "heading": "My Approach to Digital Marketing"
+    },
+    {
+      "label": "Education",
+      "heading": "My Educational Background"
+    },
+    {
+      "label": "FAQ",
+      "heading": "Frequently Asked Questions",
+      "subheading": "Got Questions? I’ve Got Answers.",
+      "text": "Here are some common questions about my digital marketing services, working approach, and how we can work together."
+    },
+    {
+      "heading": "Have a Project in Mind?",
+      "text": "Let’s connect and explore how the right digital marketing approach can support your business goals."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Who is Aayush Doshi?",
+      "answer": "I’m a digital marketer focused on helping businesses improve their online presence through SEO, Google Ads, Meta Ads, social media marketing, and other digital marketing strategies."
+    },
+    {
+      "question": "What digital marketing services do you offer?",
+      "answer": "I offer SEO, Google Ads, Meta Ads, Social Media Marketing, Content Marketing, E-commerce Marketing, Local SEO, and Website Development."
+    },
+    {
+      "question": "Do you work with businesses from different industries?",
+      "answer": "Yes, I’m open to working with businesses across different industries and understanding their unique marketing requirements."
+    },
+    {
+      "question": "Do you work with international clients?",
+      "answer": "Yes, I’m open to collaborating with businesses in India and other countries."
+    },
+    {
+      "question": "How do you approach a new project?",
+      "answer": "I start by understanding the business, its goals, target audience, and current online presence. Based on this, I identify opportunities and develop a suitable digital marketing strategy."
+    },
+    {
+      "question": "How can I get started with your services?",
+      "answer": "You can get in touch through my contact form, email, or WhatsApp. We can discuss your requirements and explore the right approach for your business."
+    },
+    {
+      "question": "Do you provide customized digital marketing strategies?",
+      "answer": "Yes, I believe every business has different objectives, so I focus on developing strategies according to its goals, audience, and industry."
+    },
+    {
+      "question": "How can I contact you for a project?",
+      "answer": "You can visit my Contact Me page and submit an enquiry or connect with me through my available contact details."
+    }
+  ]
+}

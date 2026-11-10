@@ -1,0 +1,12 @@
+<nav><div class="wrap">
+<a class="logo" href="/index.html" aria-label="{{ site.name }} — home"><img src="{{ site.logo }}" alt="{{ site.name }}"></a>
+<div class="links" id="links">
+{%- for item in navigation.main -%}
+{%- if item.children -%}<div class="dd"><button class="ddb" type="button" aria-haspopup="true" aria-expanded="false">{{ item.label }} <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="ddm">
+{%- for c in item.children -%}{%- if c.children -%}<div class="sub"><button class="subb" type="button" aria-expanded="false">{{ c.label }} <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="subm">{% for g in c.children %}<a href="{{ g.url }}">{{ g.label }}</a>{% endfor %}</div></div>{%- else -%}<a href="{{ c.url }}">{{ c.label }}</a>{%- endif -%}{%- endfor -%}
+</div></div>{%- else -%}<a href="{{ item.url }}">{{ item.label }}</a>{%- endif -%}
+{%- endfor %}
+</div>
+<a class="btn" href="{{ navigation.cta.url }}">{{ navigation.cta.label }}</a>
+<button class="burger" id="bg" aria-label="Menu">☰</button>
+</div></nav>

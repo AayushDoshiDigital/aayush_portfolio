@@ -1,0 +1,9 @@
+<footer><div class="wrap"><div class="fw">
+<div><a class="fb" href="/index.html"><img src="{{ site.logo_white }}" alt="{{ site.name }}"></a>
+<p style="margin:18px 0 0;max-width:280px">{{ site.footer_text }}</p><p style="margin:12px 0 0;font-size:13.5px;line-height:1.9"><a href="tel:{{ site.phone_link }}">{{ site.phone }}</a><br><a class="mail" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+<div class="fs"><a href="mailto:{{ site.email }}" class="mail" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a><a href="{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6 9v10M6 5v.01M11 19V9m0 4c0-2 1.5-4 4-4s3 2 3 4v6"/></svg></a></div>
+<a class="btn" href="{{ navigation.footer_button.url }}">{{ navigation.footer_button.label }}</a></div>
+<div><h4>Services</h4><ul>{% for i in navigation.footer_services %}<li><a href="{{ i.url }}">{{ i.label }}</a></li>{% endfor %}</ul></div>
+<div><h4>Industries</h4><ul>{% for i in navigation.footer_industries %}<li><a href="{{ i.url }}">{{ i.label }}</a></li>{% endfor %}</ul></div>
+<div><h4>Company</h4><ul>{% for i in navigation.footer_company %}<li><a href="{{ i.url }}">{{ i.label }}</a></li>{% endfor %}</ul></div>
+</div><div class="fbot"><span>{{ site.copyright }}</span><span>{{ site.role }}</span></div></div></footer>
