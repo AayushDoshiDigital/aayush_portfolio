@@ -1,0 +1,16 @@
+# OPTIONAL: Decap Turbo backend. NOT active. Do not use until you have a real Site ID.
+#
+# Steps (verified against decapcms.org/docs/turbo-connecting-a-site, requires Decap CMS 3.17.0+):
+#   1. Create an account at the Decap Turbo dashboard and connect GitHub (install the "Decap Turbo" GitHub App
+#      on AayushDoshiDigital/aayush_portfolio, with that repository selected).
+#   2. Create a site there: repository, branch (main) and admin URL (https://aayush-portfolio-gold.vercel.app/admin/).
+#   3. Copy the Site ID (a UUID) from the site's Overview page into turbo_site_id below.
+#   4. Replace the `backend:` block in src/admin/config.yml with the block below. Keep everything else.
+#   5. You can then delete the /api folder and the GITHUB_OAUTH_* variables in Vercel (Turbo handles sign-in).
+#
+# Note: `use_graphql: true` is not supported by turbo-github.
+backend:
+  name: turbo-github
+  repo: AayushDoshiDigital/aayush_portfolio
+  branch: main
+  turbo_site_id: PASTE-THE-UUID-FROM-THE-TURBO-DASHBOARD

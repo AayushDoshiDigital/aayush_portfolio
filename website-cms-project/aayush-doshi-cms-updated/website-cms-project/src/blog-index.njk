@@ -1,0 +1,19 @@
+---
+permalink: /blog/index.html
+---
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blog | {{ site.name }}</title>
+<meta name="description" content="Articles on SEO, Google Ads, Meta Ads, social media and digital marketing by Aayush Doshi.">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="Blog | {{ site.name }}"><meta property="og:description" content="Articles on SEO, Google Ads, Meta Ads, social media and digital marketing by Aayush Doshi."><meta property="og:type" content="website"><meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<style>{% include "base-css.njk" %}</style><link rel="stylesheet" href="/css/blog.css"></head><body>
+{% include "nav.njk" %}
+<header class="hero one"><div class="wrap"><div><div class="eyebrow">Blog</div><h1>Insights on <em>Digital Marketing.</em></h1><p>Articles on SEO, Google Ads, Meta Ads, social media and more.</p></div></div></header>
+<section><div class="wrap">{% if collections.posts.length %}<div class="bgrid">{% for post in collections.posts %}<a class="bcard rv" href="{{ post.url }}">{% if post.data.image %}<img src="{{ post.data.image }}" alt="{{ post.data.image_alt or post.data.title }}" loading="lazy">{% endif %}<div class="bt"><small>{{ post.date | dateFormat }}</small><h3>{{ post.data.title }}</h3><p>{{ post.data.description }}</p><div class="rm">Read more <span>→</span></div></div></a>{% endfor %}</div>{% else %}<div class="bempty">New articles are coming soon.</div>{% endif %}</div></section>
+<section class="dark cta"><div class="wrap"><div class="sh rv"><h2>Have a Project in Mind?</h2><p>Let’s discuss your goals and explore how the right digital marketing approach can support your business.</p></div>
+<a class="btn" href="/contact.html">Get in Touch</a></div></section>
+{% include "footer.njk" %}
+<script>{% include "base-js.njk" %}</script></body></html>

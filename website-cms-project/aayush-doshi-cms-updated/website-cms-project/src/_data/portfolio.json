@@ -1,0 +1,224 @@
+{
+  "sections": [
+    {
+      "id": "seo",
+      "label": "SEO",
+      "title": "SEO Work",
+      "subtitle": "Search Engine Optimization.",
+      "text": "SEO work handled for businesses across different industries. Hover over the list to see the clients.",
+      "clients_label": "Done SEO for:",
+      "layout": "",
+      "clients": [
+        {
+          "name": "Musk Clinic",
+          "initials": "MC",
+          "logo": ""
+        },
+        {
+          "name": "Dyne Chemicals",
+          "initials": "DC",
+          "logo": ""
+        },
+        {
+          "name": "Purple Phase Communications",
+          "initials": "PPC",
+          "logo": ""
+        },
+        {
+          "name": "Wolfable",
+          "initials": "W",
+          "logo": ""
+        },
+        {
+          "name": "TDA (The Daily Aesthetics)",
+          "initials": "TDA",
+          "logo": ""
+        },
+        {
+          "name": "Sujal Engineering",
+          "initials": "SE",
+          "logo": ""
+        },
+        {
+          "name": "JB Pumps",
+          "initials": "JP",
+          "logo": ""
+        },
+        {
+          "name": "Step Trade Capital",
+          "initials": "STC",
+          "logo": ""
+        },
+        {
+          "name": "Virtue CPA",
+          "initials": "VC",
+          "logo": ""
+        }
+      ],
+      "screenshots": [
+        {
+          "caption": "SEO screenshot 1",
+          "image": ""
+        },
+        {
+          "caption": "SEO screenshot 2",
+          "image": ""
+        },
+        {
+          "caption": "SEO screenshot 3",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "local-seo",
+      "label": "Local SEO",
+      "title": "Local SEO Work",
+      "subtitle": "Google Business Profile Optimization.",
+      "text": "Local search and Google Business Profile work for businesses that serve customers in a specific area.",
+      "clients_label": "Done Local SEO for:",
+      "layout": "",
+      "clients": [
+        {
+          "name": "Fragrance and Glamour",
+          "initials": "FG",
+          "logo": ""
+        },
+        {
+          "name": "Avenir International School",
+          "initials": "AIS",
+          "logo": ""
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "id": "google-ads",
+      "label": "Google Ads",
+      "title": "Google Ads Work",
+      "subtitle": "Search Campaign Management.",
+      "text": "Google Ads campaigns planned and managed around business goals.",
+      "clients_label": "Google Ads handled for:",
+      "layout": "",
+      "clients": [
+        {
+          "name": "Purple Phase Communications",
+          "initials": "PPC",
+          "logo": ""
+        }
+      ],
+      "screenshots": [
+        {
+          "caption": "Google Ads screenshot 1",
+          "image": ""
+        },
+        {
+          "caption": "Google Ads screenshot 2",
+          "image": ""
+        },
+        {
+          "caption": "Google Ads screenshot 3",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "meta-ads",
+      "label": "Meta Ads",
+      "title": "Meta Ads Work",
+      "subtitle": "Facebook & Instagram Campaigns.",
+      "text": "Meta Ads campaigns planned and managed to reach the right audience.",
+      "clients_label": "Meta Ads handled for:",
+      "layout": "",
+      "clients": [
+        {
+          "name": "Purple Phase Communications",
+          "initials": "PPC",
+          "logo": ""
+        },
+        {
+          "name": "Fragrance and Glamour",
+          "initials": "FG",
+          "logo": ""
+        },
+        {
+          "name": "Achievers Academy",
+          "initials": "AA",
+          "logo": ""
+        }
+      ],
+      "screenshots": [
+        {
+          "caption": "Meta Ads screenshot 1",
+          "image": ""
+        },
+        {
+          "caption": "Meta Ads screenshot 2",
+          "image": ""
+        },
+        {
+          "caption": "Meta Ads screenshot 3",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "social-media",
+      "label": "Social Media",
+      "title": "Social Media Handling",
+      "subtitle": "Accounts I Manage.",
+      "text": "Social media handled for businesses across different industries. Screenshots of the accounts appear below.",
+      "clients_label": "Social media handled for:",
+      "layout": "s5",
+      "clients": [
+        {
+          "name": "Gita Samosa",
+          "initials": "GS",
+          "logo": ""
+        },
+        {
+          "name": "Laxmi Ganthiya Rath",
+          "initials": "LG",
+          "logo": ""
+        },
+        {
+          "name": "Raghudeep Eye Hospital",
+          "initials": "RE",
+          "logo": ""
+        },
+        {
+          "name": "Fragrance and Glamour",
+          "initials": "FG",
+          "logo": ""
+        },
+        {
+          "name": "Avenir International School",
+          "initials": "AIS",
+          "logo": ""
+        }
+      ],
+      "screenshots": [
+        {
+          "caption": "Gita Samosa",
+          "image": ""
+        },
+        {
+          "caption": "Laxmi Ganthiya Rath",
+          "image": ""
+        },
+        {
+          "caption": "Raghudeep Eye Hospital",
+          "image": ""
+        },
+        {
+          "caption": "Fragrance and Glamour",
+          "image": ""
+        },
+        {
+          "caption": "Avenir International School",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}

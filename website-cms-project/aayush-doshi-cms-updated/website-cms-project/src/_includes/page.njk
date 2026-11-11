@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ meta_title or title }} | Marketing with Aayush Doshi</title>
+  {% if meta_description %}<meta name="description" content="{{ meta_description | escape }}">{% endif %}
+  {% if canonical %}<link rel="canonical" href="{{ canonical | escape }}">{% else %}<link rel="canonical" href="{{ site.url }}{{ page.url }}">{% endif %}
+  {% if noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow">{% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ meta_title or title }}">
+  {% if meta_description %}<meta property="og:description" content="{{ meta_description | escape }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--black:#0b0b0b;--yellow:#facc15;--white:#fff;--muted:#666;--line:#e8e8e8}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--black);line-height:1.7;background:#fff}
+    a{color:inherit}.site-nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100% - 1120px)/2));gap:20px}
+    .brand{font-weight:700;text-decoration:none;letter-spacing:-.04em}.brand span{color:#b68b00}.nav-links{display:flex;gap:22px;font-size:13px}.nav-links a{text-decoration:none}.nav-cta{background:var(--black);color:#fff;padding:9px 17px;border-radius:30px;text-decoration:none;font-size:13px}
+    .hero{background:var(--black);color:#fff;padding:76px 24px}.hero-inner{max-width:1040px;margin:auto}.eyebrow{color:var(--yellow);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600}.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.08;letter-spacing:-.05em;max-width:850px;margin:16px 0}.hero p{color:#c8c8c8;max-width:720px;font-size:17px}.hero img{display:block;max-width:min(100%,720px);max-height:420px;object-fit:cover;margin-top:30px;border-radius:8px}
+    main{max-width:900px;margin:0 auto;padding:64px 24px 90px}main h2{font-size:30px;line-height:1.2;letter-spacing:-.035em;margin:42px 0 14px}main h3{font-size:22px;margin:30px 0 10px}main p,main li{color:#444;font-size:16px}main a{color:#806000;text-decoration:underline;text-underline-offset:3px}main img{max-width:100%;height:auto;border-radius:8px}main blockquote{border-left:3px solid var(--yellow);padding:8px 20px;margin:24px 0;background:#fafafa}main hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+    footer{background:#0b0b0b;color:#fff;padding:28px 24px;text-align:center;font-size:13px}footer a{color:var(--yellow)}@media(max-width:700px){.site-nav{height:auto;min-height:64px;flex-wrap:wrap;padding:14px 20px}.nav-links{order:3;width:100%;overflow:auto;gap:16px;padding:8px 0}.hero{padding:58px 20px}main{padding:44px 20px 64px}}
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="brand" href="/">Marketing with <span>Aayush Doshi</span></a>
+    <div class="nav-links"><a href="/">Home</a><a href="/about.html">About</a><a href="/portfolio.html">Portfolio</a><a href="/blog/">Blogs</a><a href="/contact.html">Contact</a></div>
+    <a class="nav-cta" href="/contact.html">Get in Touch</a>
+  </nav>
+  <header class="hero"><div class="hero-inner">
+    <div class="eyebrow">{{ hero_label or "Marketing with Aayush Doshi" }}</div>
+    <h1>{{ hero_heading or title }}</h1>
+    {% if intro %}<p>{{ intro }}</p>{% endif %}
+    {% if hero_image %}<img src="{{ hero_image }}" alt="{{ hero_image_alt or title }}">{% endif %}
+  </div></header>
+  <main>{{ content | safe }}</main>
+  <footer>Marketing with Aayush Doshi · <a href="/contact.html">Let's work together</a></footer>
+</body>
+</html>

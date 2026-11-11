@@ -1,0 +1,168 @@
+{
+  "main": [
+    {
+      "label": "Home",
+      "url": "/index.html"
+    },
+    {
+      "label": "About Me",
+      "url": "/about.html"
+    },
+    {
+      "label": "Portfolio",
+      "url": "/portfolio.html"
+    },
+    {
+      "label": "Services",
+      "url": "",
+      "children": [
+        {
+          "label": "All Services",
+          "url": "/index.html#services"
+        },
+        {
+          "label": "SEO Services",
+          "url": "/seo-services.html"
+        },
+        {
+          "label": "Google Ads",
+          "url": "/google-ads.html"
+        },
+        {
+          "label": "Meta Ads",
+          "url": "/meta-ads.html"
+        },
+        {
+          "label": "Social Media Marketing",
+          "url": "/social-media-marketing.html"
+        },
+        {
+          "label": "Content Marketing",
+          "url": "/content-marketing.html"
+        },
+        {
+          "label": "E-commerce Marketing",
+          "url": "/ecommerce-marketing.html"
+        },
+        {
+          "label": "Local SEO",
+          "url": "/local-seo.html"
+        },
+        {
+          "label": "Website Development",
+          "url": "/website-development.html"
+        }
+      ]
+    },
+    {
+      "label": "Insights",
+      "url": "",
+      "children": [
+        {
+          "label": "Blogs",
+          "url": "/blog/"
+        },
+        {
+          "label": "Industries",
+          "url": "",
+          "children": [
+            {
+              "label": "All Industries",
+              "url": "/index.html#industries"
+            },
+            {
+              "label": "Healthcare",
+              "url": "/healthcare.html"
+            },
+            {
+              "label": "Manufacturing",
+              "url": "/manufacturing.html"
+            },
+            {
+              "label": "Food",
+              "url": "/food.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Contact Me",
+      "url": "/contact.html"
+    }
+  ],
+  "cta": {
+    "label": "Get in Touch",
+    "url": "/contact.html"
+  },
+  "footer_services": [
+    {
+      "label": "Search Engine Optimization (SEO)",
+      "url": "/seo-services.html"
+    },
+    {
+      "label": "Google Ads",
+      "url": "/google-ads.html"
+    },
+    {
+      "label": "Meta Ads",
+      "url": "/meta-ads.html"
+    },
+    {
+      "label": "Social Media Marketing",
+      "url": "/social-media-marketing.html"
+    },
+    {
+      "label": "Content Marketing",
+      "url": "/content-marketing.html"
+    },
+    {
+      "label": "E-commerce Marketing",
+      "url": "/ecommerce-marketing.html"
+    },
+    {
+      "label": "Local SEO",
+      "url": "/local-seo.html"
+    },
+    {
+      "label": "Website Development",
+      "url": "/website-development.html"
+    }
+  ],
+  "footer_industries": [
+    {
+      "label": "Healthcare",
+      "url": "/healthcare.html"
+    },
+    {
+      "label": "Manufacturing",
+      "url": "/manufacturing.html"
+    },
+    {
+      "label": "Food",
+      "url": "/food.html"
+    }
+  ],
+  "footer_company": [
+    {
+      "label": "About Me",
+      "url": "/about.html"
+    },
+    {
+      "label": "Portfolio",
+      "url": "/portfolio.html"
+    },
+    {
+      "label": "Blogs",
+      "url": "/blog/"
+    },
+    {
+      "label": "Contact Me",
+      "url": "/contact.html"
+    }
+  ],
+  "footer_button": {
+    "label": "Get in Touch",
+    "url": "/contact.html"
+  }
+}
