@@ -1,13 +1,6 @@
 {
   "sections": [
     {
-      "id": "seo",
-      "label": "SEO",
-      "title": "SEO Work",
-      "subtitle": "Search Engine Optimization.",
-      "text": "SEO work handled for businesses across different industries. Hover over the list to see the clients.",
-      "clients_label": "Done SEO for:",
-      "layout": "",
       "clients": [
         {
           "name": "Musk Clinic",
@@ -55,6 +48,8 @@
           "logo": ""
         }
       ],
+      "layout": "",
+      "text": "SEO work handled for businesses across different industries. Hover over the list to see the clients.",
       "screenshots": [
         {
           "caption": "SEO screenshot 1",
@@ -67,17 +62,19 @@
         {
           "caption": "SEO screenshot 3",
           "image": ""
+        },
+        {
+          "image": "/images/uploads/untitled-design-1-.png",
+          "caption": "Dashboard of Dyne Chemicals LLP website search performance of 25 days."
         }
-      ]
+      ],
+      "label": "SEO",
+      "subtitle": "Search Engine Optimization.",
+      "title": "SEO Work",
+      "id": "seo",
+      "clients_label": "Done SEO for:"
     },
     {
-      "id": "local-seo",
-      "label": "Local SEO",
-      "title": "Local SEO Work",
-      "subtitle": "Google Business Profile Optimization.",
-      "text": "Local search and Google Business Profile work for businesses that serve customers in a specific area.",
-      "clients_label": "Done Local SEO for:",
-      "layout": "",
       "clients": [
         {
           "name": "Fragrance and Glamour",
@@ -90,16 +87,16 @@
           "logo": ""
         }
       ],
-      "screenshots": []
+      "layout": "",
+      "text": "Local search and Google Business Profile work for businesses that serve customers in a specific area.",
+      "screenshots": [],
+      "label": "Local SEO",
+      "subtitle": "Google Business Profile Optimization.",
+      "title": "Local SEO Work",
+      "id": "local-seo",
+      "clients_label": "Done Local SEO for:"
     },
     {
-      "id": "google-ads",
-      "label": "Google Ads",
-      "title": "Google Ads Work",
-      "subtitle": "Search Campaign Management.",
-      "text": "Google Ads campaigns planned and managed around business goals.",
-      "clients_label": "Google Ads handled for:",
-      "layout": "",
       "clients": [
         {
           "name": "Purple Phase Communications",
@@ -107,6 +104,8 @@
           "logo": ""
         }
       ],
+      "layout": "",
+      "text": "Google Ads campaigns planned and managed around business goals.",
       "screenshots": [
         {
           "caption": "Google Ads screenshot 1",
@@ -120,16 +119,14 @@
           "caption": "Google Ads screenshot 3",
           "image": ""
         }
-      ]
+      ],
+      "label": "Google Ads",
+      "subtitle": "Search Campaign Management.",
+      "title": "Google Ads Work",
+      "id": "google-ads",
+      "clients_label": "Google Ads handled for:"
     },
     {
-      "id": "meta-ads",
-      "label": "Meta Ads",
-      "title": "Meta Ads Work",
-      "subtitle": "Facebook & Instagram Campaigns.",
-      "text": "Meta Ads campaigns planned and managed to reach the right audience.",
-      "clients_label": "Meta Ads handled for:",
-      "layout": "",
       "clients": [
         {
           "name": "Purple Phase Communications",
@@ -147,6 +144,8 @@
           "logo": ""
         }
       ],
+      "layout": "",
+      "text": "Meta Ads campaigns planned and managed to reach the right audience.",
       "screenshots": [
         {
           "caption": "Meta Ads screenshot 1",
@@ -160,16 +159,14 @@
           "caption": "Meta Ads screenshot 3",
           "image": ""
         }
-      ]
+      ],
+      "label": "Meta Ads",
+      "subtitle": "Facebook & Instagram Campaigns.",
+      "title": "Meta Ads Work",
+      "id": "meta-ads",
+      "clients_label": "Meta Ads handled for:"
     },
     {
-      "id": "social-media",
-      "label": "Social Media",
-      "title": "Social Media Handling",
-      "subtitle": "Accounts I Manage.",
-      "text": "Social media handled for businesses across different industries. Screenshots of the accounts appear below.",
-      "clients_label": "Social media handled for:",
-      "layout": "s5",
       "clients": [
         {
           "name": "Gita Samosa",
@@ -197,6 +194,8 @@
           "logo": ""
         }
       ],
+      "layout": "s5",
+      "text": "Social media handled for businesses across different industries. Screenshots of the accounts appear below.",
       "screenshots": [
         {
           "caption": "Gita Samosa",
@@ -218,7 +217,13 @@
           "caption": "Avenir International School",
           "image": ""
         }
-      ]
-    }
+      ],
+      "label": "Social Media",
+      "subtitle": "Accounts I Manage.",
+      "title": "Social Media Handling",
+      "id": "social-media",
+      "clients_label": "Social media handled for:"
+    },
+    {}
   ]
 }
