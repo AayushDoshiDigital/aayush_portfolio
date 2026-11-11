@@ -83,22 +83,28 @@
           "logo": "https://purplephase.in/_next/static/media/ppc-combined-logo.3ikfm46kbfigd.png"
         },
         {
-          "name": "Dyne Chemicals LLP"
+          "name": "Dyne Chemicals LLP",
+          "logo": "https://dyne-chemicals.com/"
         },
         {
-          "name": "Wolfable"
+          "name": "Wolfable",
+          "logo": "https://wolfable.com/"
         },
         {
-          "name": "Musk Clinic"
+          "name": "Musk Clinic",
+          "logo": "https://muskclinic.com/"
         },
         {
-          "name": "The Daily Aesthetic Clinic"
+          "name": "The Daily Aesthetic Clinic",
+          "logo": "https://thedailyaesthetics.com"
         },
         {
-          "name": "Jb Pumps"
+          "name": "Jb Pumps",
+          "logo": "https://jbpumpsindia.com/"
         },
         {
-          "name": "Step Trade"
+          "name": "Step Trade",
+          "logo": "https://steptrade.capital/"
         }
       ],
       "layout": "",
