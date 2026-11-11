@@ -207,23 +207,23 @@
       "screenshots": [
         {
           "caption": "Gita Samosa",
-          "image": ""
+          "image": "/images/uploads/untitled-design-6-.png"
         },
         {
           "caption": "Laxmi Ganthiya Rath",
-          "image": ""
+          "image": "/images/uploads/untitled-design-7-.png"
         },
         {
           "caption": "Raghudeep Eye Hospital",
-          "image": ""
+          "image": "/images/uploads/untitled-design-8-.png"
         },
         {
           "caption": "Fragrance and Glamour",
-          "image": ""
+          "image": "/images/uploads/untitled-design-9-.png"
         },
         {
           "caption": "Avenir International School",
-          "image": ""
+          "image": "/images/uploads/untitled-design-10-.png"
         }
       ],
       "label": "Social Media",
@@ -231,7 +231,6 @@
       "title": "Social Media Handling",
       "id": "social-media",
       "clients_label": "Social media handled for:"
-    },
-    {}
+    }
   ]
 }
